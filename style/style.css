@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+/*header et nav*/
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#head{
+    height: 100vh;
+    width: 100%;
+    background: url(../assets/2.jpg);
+}
+
+.presentation{
+    width: 30%;
+    margin: 200px 0 0 50px;
+}
+.presentation h1 {
+    margin-bottom: 50px;
+    color: white;
+}
+.presentation p {
+    color: whitesmoke;
+    line-height: 30px;
+}
+.my-btn{
+    width: 150px;
+}
+.liens{
+    text-decoration: none;
+    color: black;
+}
+/* fin header et nav*/
+
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+
+/* section catégorie*/
+.image{
+    height: 193px;
+}
+.card-size{
+    height: 530px;
+}
+/* fin section catégorie*/
+
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+/*---- ----- ------ - ---------- -------------- ------------ ----------*/
+
+/* footer*/
+.bande_footer{
+    display: flex;
+    height: 30px;
+    background-color: rgb(191,105,47);
+    justify-content: center;
+    align-items: center;
+}
+.bande_footer a {
+    color: white;
+}
+/* fin footer*/
