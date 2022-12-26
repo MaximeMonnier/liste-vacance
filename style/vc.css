@@ -17,7 +17,6 @@
 }
 
 .presentation{
-    width: 30%;
     margin: 200px 0 0 50px;
 }
 .presentation h1 {
@@ -27,9 +26,6 @@
 .presentation p {
     color: whitesmoke;
     line-height: 30px;
-}
-.my-btn{
-    width: 150px;
 }
 .liens{
     text-decoration: none;
@@ -52,7 +48,6 @@ ul{
     height: 530px;
 }
 .image-maps{
-    height: 280px;
     width: 100%;
 
 }
