@@ -45,8 +45,15 @@
 .image{
     height: 193px;
 }
+ul{
+    list-style: none;
+}
 .card-size{
     height: 530px;
+}
+.image-maps{
+    width: 100%;
+
 }
 /* fin section catégorie*/
 

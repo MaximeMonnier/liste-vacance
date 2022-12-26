@@ -44,6 +44,9 @@
 .image{
     height: 193px;
 }
+ul{
+    list-style: none;
+}
 .card-size{
     height: 530px;
 }
