@@ -44,6 +44,10 @@
 .image{
     height: 193px;
 }
+.image-mafat{
+    height: auto;
+    width: 100%;
+}
 ul{
     list-style: none;
 }
