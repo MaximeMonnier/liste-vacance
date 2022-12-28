@@ -49,6 +49,10 @@
     width: 100%;
     border-radius: 5px;
 }
+.image-car{
+    height: 500px;
+    width: auto;
+}
 ul{
     list-style: none;
 }
