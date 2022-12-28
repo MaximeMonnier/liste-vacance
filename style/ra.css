@@ -45,8 +45,10 @@
     height: 193px;
 }
 .image-mafat{
-    height: auto;
+    margin-top: 50px;
+    height: 380px;
     width: 100%;
+    border-radius: 5px;
 }
 ul{
     list-style: none;
@@ -54,6 +56,28 @@ ul{
 .card-size{
     height: 530px;
 }
+/* fin section catégorie*/
+
+/* span*/
+.red{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: red;
+}
+.green{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: green;
+}
+.orange{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: orange;
+}
+
 /* fin section catégorie*/
 
 /*---- ----- ------ - ---------- -------------- ------------ ----------*/
