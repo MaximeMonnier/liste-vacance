@@ -11,8 +11,7 @@
 }
 #head{
     height: 100vh;
-    width: 100%;
-    background: url(../assets/3.jpg);
+    background: url(../assets/photo-perso/paysage.jpg);
     background-size: cover;
 }
 
@@ -55,6 +54,27 @@ li{
 
 }
 /* fin section catégorie*/
+
+/* span*/
+.red{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: red;
+}
+.green{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: green;
+}
+.orange{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: orange;
+}
+/* fin span*/
 
 /*---- ----- ------ - ---------- -------------- ------------ ----------*/
 /*---- ----- ------ - ---------- -------------- ------------ ----------*/
