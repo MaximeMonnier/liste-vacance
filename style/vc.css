@@ -57,20 +57,14 @@ li{
 
 /* span*/
 .red{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 100%;
     background: red;
 }
-.green{
-    height: 30px;
-    width: 30px;
-    border-radius: 100%;
-    background: green;
-}
 .orange{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 100%;
     background: orange;
 }
