@@ -1,4 +1,5 @@
-
+// alert ('Bien le bonjour ! pas facile de trouver un vielle amie partie depuis presque 2ans déjà ! Je vous et fait un petit jeux de piste pour me retrouver !!! Aller bonne chance')
+// prompt('Si vous voulez aller plus loin il va falloire trouver ma date de naissance')
 //-_-_-_-_-_-_-_-_-_-_-_-_-_ Compteur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 const text = document.querySelector('.decompte')
@@ -7,7 +8,7 @@ function getChrono () {
     const now = new Date().getTime();
     const countDownDate = new Date('January 30, 2023').getTime();
 
-    console.log(text);
+    // console.log(text);
 
 const distanceBase = countDownDate - now;
 
@@ -25,6 +26,10 @@ const countDownInterval = setInterval(() => {
     getChrono()
 
 }, 1000);
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_ Bar de progression-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 // GSAP
 gsap.to(".groot", {x: 200});
