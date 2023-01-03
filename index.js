@@ -1,8 +1,30 @@
 // alert ('Bien le bonjour ! pas facile de trouver un vielle amie partie depuis presque 2ans déjà ! Je vous et fait un petit jeux de piste pour me retrouver !!! Aller bonne chance')
 // prompt('Si vous voulez aller plus loin il va falloire trouver ma date de naissance')
-//-_-_-_-_-_-_-_-_-_-_-_-_-_ Compteur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 const text = document.querySelector('.decompte')
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_  loadeur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("chargement");
+    const mainContent = document.getElementById("main-content");
+    setTimeout(() => {
+
+        loader.style.display = "none"
+        mainContent.style.visibility = "visible"
+
+    },8000);
+
+
+
+})
+
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_ Compteur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 function getChrono () {
     const now = new Date().getTime();
