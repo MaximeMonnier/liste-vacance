@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* loadin de chargement  */
+/* chargement  */
 #chargement
 {
   position: relative;
@@ -59,6 +59,10 @@
   animation: animateDot 2s linear infinite;
   animation-delay: calc(0.1s * var(--i));
 }
+#chargement .loader:last-child .dot
+{
+  animation-delay: calc(-0.1s * var(--i));
+}
 @keyframes animateDot
 {
   0%
@@ -74,8 +78,23 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  #chargement h2 {
+    margin-top: 10px;
+    letter-spacing: 5px;
+    font-size: 18px;
+  }
 
-/*fin loadin de chargement  */
+  #chargement .loader .dot
+{
+
+  width: 10px;
+  height: 10px;
+  margin: 10px 5px;
+}
+  
+}
+/*fin de chargement  */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
