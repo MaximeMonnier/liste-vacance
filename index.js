@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
         loader.style.display = "none"
         mainContent.style.visibility = "visible"
 
-    },1000);
+    },1);
 
 
 
@@ -30,7 +30,7 @@ console.log(banner, blocks);
 
 for(let i = 1; i < 400; i++){
     banner.innerHTML += "<div class='blocks'></div>"
-    blocks[i].style.aniamtionDelay = `${i * 0.05}s`;
+    blocks[i].style.animationDelay = `${i * 0.01}s`;
 }
 
 
