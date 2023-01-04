@@ -5,34 +5,29 @@ const text = document.querySelector('.decompte')
 
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  loadeur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+//-_-_-_-_-_-_-_-_-_-_-_-_-_  Bg brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 
 window.addEventListener("load", () => {
     const loader = document.getElementById("chargement");
     const mainContent = document.getElementById("main-content");
+    const banner = document.getElementsByClassName("banner")[0];
+    const blocks = document.getElementsByClassName("blocks");
     setTimeout(() => {
 
         loader.style.display = "none"
         mainContent.style.visibility = "visible"
+
+        for(let i = 1; i < 400; i++){
+            banner.innerHTML += "<div class='blocks'></div>"
+            blocks[i].style.animationDelay = `${i * 0.01}s`;
+        }
 
     },8000);
 
 
 
 })
-
-
-//-_-_-_-_-_-_-_-_-_-_-_-_-_  Bg brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-const banner = document.getElementsByClassName("banner")[0];
-const blocks = document.getElementsByClassName("blocks");
-
-console.log(banner, blocks);
-
-for(let i = 1; i < 400; i++){
-    banner.innerHTML += "<div class='blocks'></div>"
-    blocks[i].style.animationDelay = `${i * 0.01}s`;
-}
-
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_ Compteur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
