@@ -15,12 +15,23 @@ window.addEventListener("load", () => {
         loader.style.display = "none"
         mainContent.style.visibility = "visible"
 
-    },8000);
+    },1000);
 
 
 
 })
 
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_  Bg brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+const banner = document.getElementsByClassName("banner")[0];
+const blocks = document.getElementsByClassName("blocks");
+
+console.log(banner, blocks);
+
+for(let i = 1; i < 400; i++){
+    banner.innerHTML += "<div class='blocks'></div>"
+    blocks[i].style.aniamtionDelay = `${i * 0.05}s`;
+}
 
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_ Compteur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
