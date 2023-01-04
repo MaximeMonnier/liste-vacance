@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
         loader.style.display = "none"
         mainContent.style.visibility = "visible"
 
-    },1);
+    },8000);
 
 
 
