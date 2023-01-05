@@ -13,6 +13,7 @@ window.addEventListener("load", () => {
     const mainContent = document.getElementById("main-content");
     const banner = document.getElementsByClassName("banner")[0];
     const blocks = document.getElementsByClassName("blocks");
+    
     setTimeout(() => {
 
         loader.style.display = "none"
@@ -23,7 +24,7 @@ window.addEventListener("load", () => {
             blocks[i].style.animationDelay = `${i * 0.01}s`;
         }
 
-    },8000);
+    },1);
 
 
 

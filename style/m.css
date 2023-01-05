@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.red{
+  color: red;
+}
 
 /* chargement  */
 #chargement
@@ -106,13 +109,18 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #333;
+  background: white;
 }
 #bg-brique #main-content{
   visibility: hidden;
   position: relative;
   text-align: center;
   z-index: 1;
+}
+#bg-brique #modal {
+  width: 300px;
+  height: 300px;
+  background-color: white;
 }
 .banner
 {
@@ -179,7 +187,100 @@
 
 /* fin background brique */
 
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_-fin background brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 
-/* contentu principale  */
 
-/* fin contentu principale  */
+/* panneau 3d */
+
+.box
+{
+  position: relative;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: panneau 16s linear infinite;
+}
+@keyframes panneau
+{
+  0%
+  {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+  100%
+  {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+}
+.box div
+{
+  position: absolute;
+  inset: 0;
+  transform-style:preserve-3d ;
+}
+.box div.rock span
+{
+  position: absolute;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 100px;
+  background-color: #444;
+  transform: rotateY(calc(90deg *var(--i))) translateZ(100px);
+  transition: 0.5s;
+}
+.box:hover div.rock span
+{
+  background: red;
+  filter: drop-shadow(0 0 50px red);
+}
+.box div.phrase span
+{
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+  cursor: pointer;
+  color: white;
+  font-size: 8em;
+  text-transform: uppercase;
+  z-index: 10;
+  line-height: 1em;
+  -webkit-text-stroke: 3px black;
+  transform-style: preserve-3d;
+}
+.box div.phrase span:nth-child(1)
+{
+  font-size: 6em;
+}
+.box div.phrase span::before
+{
+  content: attr(data-text);
+  position: absolute;
+  bottom: 7px;
+  transform-origin:bottom;
+  transform: rotateX(90deg);
+  color: rgba(0,0,0,0.1);
+  -webkit-text-stroke: 0px black;
+  filter: blur(5px);
+}
+.box div.phrase span::after
+{
+  content: "";
+  position: absolute;
+  top: 100px;
+  width: 360px;
+  height: 60px;
+  background-attachment: #444;
+  transform: rotateX(-90deg);
+  transition: 0.5s;
+}
+.box:hover div.phrase span::after
+{
+  background: red;
+  filter: drop-shadow(0 0 50px red);
+}
+
+/* fin panneau 3d */
