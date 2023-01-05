@@ -160,7 +160,7 @@
   50%
   {
     opacity: 1;
-    background: url(../assets/6.4.jpg);
+    background: rgb(34, 30, 30);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -171,7 +171,7 @@
   {
     opacity: 1;
     transform: scale(1) translateY(0px);
-    background: url(../assets/6.4.jpg);
+    background: rgb(34, 30, 30);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -275,6 +275,100 @@
   filter: drop-shadow(0 0 50px red);
 }
 
+
+@media (max-width: 500px)
+{
+ /* panneau 3d */
+
+.box
+{
+  position: relative;
+  height: 200px;
+  top: 50px;
+  transform-style: preserve-3d;
+  animation: panneau 16s linear infinite;
+}
+@keyframes panneau
+{
+  0%
+  {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+  100%
+  {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+}
+.box div
+{
+  position: absolute;
+  inset: 0;
+  transform-style:preserve-3d ;
+}
+.box div.rock span
+{
+  position: absolute;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 500px;
+  background-color: #444;
+  transform: rotateY(calc(90deg *var(--i))) translateZ(100px);
+  transition: 0.5s;
+}
+.box:hover div.rock span
+{
+  background: red;
+  filter: drop-shadow(0 0 50px red);
+}
+.box div.phrase span
+{
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+  cursor: pointer;
+  color: white;
+  font-size: 8em;
+  text-transform: uppercase;
+  z-index: 10;
+  line-height: 1em;
+  -webkit-text-stroke: 3px black;
+  transform-style: preserve-3d;
+}
+.box div.phrase span:nth-child(1)
+{
+  font-size: 6em;
+}
+.box div.phrase span::before
+{
+  content: attr(data-text);
+  position: absolute;
+  bottom: 7px;
+  transform-origin:bottom;
+  transform: rotateX(90deg);
+  color: rgba(0,0,0,0.1);
+  -webkit-text-stroke: 0px black;
+  filter: blur(5px);
+}
+.box div.phrase span::after
+{
+  top: 100px;
+  width: 360px;
+  height: 60px;
+  background-attachment: #444;
+  transform: rotateX(-90deg);
+  transition: 0.5s;
+}
+.box:hover div.phrase span::after
+{
+  background: red;
+  filter: drop-shadow(0 0 50px red);
+} 
+}
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-fin panneau 3d-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -304,6 +398,17 @@
   border-radius: 20px;
   overflow: hidden;
 }
+.carte .cercle:hover
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: wheat;
+}
 .carte .cercle::before
 {
   content: "";
@@ -313,7 +418,7 @@
   width: 100%;
   height: 100%;
   background: red;
-  clip-path: circle(120px at center); 
+  clip-path: circle(150px at center); 
   transition: 0.5s;
 }
 .carte .cercle:hover:before
@@ -327,7 +432,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-40%,-50%);
-  height: 300px;
+  height: 170px;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -341,6 +446,7 @@
   position: relative;
   width: 50%;
   text-align: start;
+  margin: 5px 0 5px 5px;
   /* left: 5%; */
   /* padding: 20px 20px 20px 40px; */
   transition: 0.5s;
@@ -354,14 +460,16 @@
 }
 .carte .contenue h2
 {
-  color: white;
+  color: grey;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1em;
+  margin-bottom: 30px;
 }
 .carte .contenue p 
 {
   color: black;
+  margin-bottom: 10px;
 }
 .carte .contenue a
 {
@@ -370,6 +478,89 @@
   padding: 10px 20px;
   border-radius: 10px;
   background: white;
+}
+.carte .contenue button
+{
+  background: red;
+  padding: 2px 2px;
+  border-radius: 5px;
+  border: red;
+  color: white;
+}
+@media (max-width: 500px)
+{
+  .carte
+{
+  top: 100px;
+  width: 300px;
+  height: 250px;
+}
+.carte .cercle
+{
+  top: 0;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+}
+.carte .cercle:hover
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.carte .cercle::before
+{
+  clip-path: circle(100px at center); 
+}
+.carte img
+{
+  top: 50%;
+  left: 40%;
+  height: 100px;
+}
+.carte .contenue
+{
+  position: relative;
+  width: 50%;
+  text-align: start;
+  margin: 5px 0 5px 5px;
+  /* left: 5%; */
+  /* padding: 20px 20px 20px 40px; */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.carte .contenue h2
+{
+  color: grey;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+.carte .contenue p 
+{
+  color: black;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+.carte .contenue input
+{
+  height: 18px;
+  width: 100px;
+  margin-bottom: 15px;
+}
+.carte .contenue button
+{
+  font-size: 11px;
+  background: red;
+  padding: 1px 1px;
+  border-radius: 3px;
+  border: red;
+  color: white;
+}
 }
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
