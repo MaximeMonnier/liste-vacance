@@ -97,7 +97,6 @@
 }
   
 }
-/*fin de chargement  */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-fin de chargement -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -116,11 +115,6 @@
   position: relative;
   text-align: center;
   z-index: 1;
-}
-#bg-brique #modal {
-  width: 300px;
-  height: 300px;
-  background-color: white;
 }
 .banner
 {
@@ -184,9 +178,6 @@
     background-size: cover;
   }
 }
-
-/* fin background brique */
-
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* -_-_-_-_-_-_-_-_-_-_-fin background brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -284,4 +275,103 @@
   filter: drop-shadow(0 0 50px red);
 }
 
-/* fin panneau 3d */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_-fin panneau 3d-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+
+/* modal */
+
+.carte
+{
+  position: relative;
+  top: 100px;
+  margin: auto;
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.carte .cercle
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.carte .cercle::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  clip-path: circle(120px at center); 
+  transition: 0.5s;
+}
+.carte .cercle:hover:before
+{
+  background-color: antiquewhite;
+  clip-path: circle(400px at center); 
+}
+.carte img
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%,-50%);
+  height: 300px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.carte:hover img
+{
+  left: 70%;
+  /* height: 400px; */
+}
+.carte .contenue
+{
+  position: relative;
+  width: 50%;
+  text-align: start;
+  /* left: 5%; */
+  /* padding: 20px 20px 20px 40px; */
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.carte:hover .contenue
+{
+  opacity: 1;
+  visibility: visible;
+}
+.carte .contenue h2
+{
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+}
+.carte .contenue p 
+{
+  color: black;
+}
+.carte .contenue a
+{
+  position: relative;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+}
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/* -_-_-_-_-_-_-_-_-_-_-fin modal-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */

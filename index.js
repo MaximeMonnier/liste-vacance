@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     const blocks = document.getElementsByClassName("blocks");
     
     setTimeout(() => {
-
+        // alert("06/09/1995")
         loader.style.display = "none"
         mainContent.style.visibility = "visible"
 
