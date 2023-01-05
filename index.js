@@ -2,7 +2,7 @@
 // prompt('Si vous voulez aller plus loin il va falloire trouver ma date de naissance')
 
 const text = document.querySelector('.decompte')
-
+const phrase = document.querySelector(".phrase")
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  loadeur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  Bg brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -47,7 +47,11 @@ const minutes = Math.floor((distanceBase % (1000*60*60) / (1000*60)));
 const seconds = Math.floor((distanceBase % (1000*60) / 1000));
 // console.log(days , hours, minutes, seconds);
 
-text.innerText = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+// text.innerText = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+phrase.innerHTML = `<span style="--i:0;" data-text="Happy">${days}j</span>
+<span style="--i:1;" data-text="New">${hours}h</span>
+<span style="--i:2;" data-text="Year">${minutes}m</span>
+<span style="--i:3;" data-text="2023">${seconds}s</span>`
 };
 
 const countDownInterval = setInterval(() => {

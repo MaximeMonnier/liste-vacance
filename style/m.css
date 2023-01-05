@@ -198,6 +198,7 @@
 {
   position: relative;
   height: 200px;
+  top: 50px;
   transform-style: preserve-3d;
   animation: panneau 16s linear infinite;
 }
