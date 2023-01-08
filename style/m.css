@@ -458,13 +458,39 @@
   opacity: 1;
   visibility: visible;
 }
-.carte .contenue h2
-{
+.titre-modal{
+  width: auto;
+  height: 100px;
+}
+.titre-modal h2{
   color: grey;
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 1em;
   margin-bottom: 30px;
+}
+#target{
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+}
+#target::after {
+  content: "";
+  position: absolute;
+  height: 1.5rem;
+  width: 5px;
+  background: black;
+  top: 0;
+  transform: translateY(5px);
+  animation: anim 1s linear infinite;
+}
+@keyframes anim {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .carte .contenue p 
 {

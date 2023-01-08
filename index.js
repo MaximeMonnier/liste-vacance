@@ -1,8 +1,15 @@
-// alert ('Bien le bonjour ! pas facile de trouver un vielle amie partie depuis presque 2ans déjà ! Je vous et fait un petit jeux de piste pour me retrouver !!! Aller bonne chance')
-// prompt('Si vous voulez aller plus loin il va falloire trouver ma date de naissance')
-
+// ----------------------Var compteur ---------------------------------//
 const text = document.querySelector('.decompte')
 const phrase = document.querySelector(".phrase")
+// ----------------------Fin Var compteur ---------------------------------//
+// ----------------------Var text typong ---------------------------------//
+const target = document.getElementById("target");
+console.log(target);
+let array = ['Comment trouver Maxime','How to find max','Cómo encontrar a Maxime','So finden Sie Maxime','كيف تجد مكسيم','如何找到馬克西姆' ];
+let wordIndex = 0; 
+let letterIndex = 0; 
+// ----------------------Fin Var text typong ---------------------------------//
+
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  loadeur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  Bg brique -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -61,8 +68,40 @@ const countDownInterval = setInterval(() => {
 }, 1000);
 
 
-//-_-_-_-_-_-_-_-_-_-_-_-_-_ Bar de progression-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+//-_-_-_-_-_-_-_-_-_-_-_-_-_ text typing-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+const creatLetter = () => {
+    const letter = document.createElement("span")
+    target.appendChild(letter);
+
+    letter.textContent = array[wordIndex][letterIndex]
+
+    setTimeout (() => {
+        letter.remove();
+    }, 2800)
+};
+
+const loop = () => {
+    setTimeout (() => {
+        if (wordIndex >= array.length) {
+            wordIndex = 0;
+            letterIndex = 0;
+            loop()
+        } else if (letterIndex < array[wordIndex].length){
+            creatLetter()
+            letterIndex++
+            loop();
+        } else {
+            wordIndex++;
+            letterIndex = 0;
+            setTimeout (() => {
+                loop()
+            }, 2800)
+        }
+    }, 50)
+};
+
+loop();
 
 // GSAP
 gsap.to(".groot", {x: 200});
