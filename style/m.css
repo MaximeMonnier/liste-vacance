@@ -21,7 +21,15 @@
   flex-direction: column;
   background: black;
   animation: changeColor 5s linear infinite;
+  visibility: visible;
 }
+/* .visible{
+  visibility: visible;
+}
+.invisible
+{
+  visibility: hidden;
+} */
 @keyframes changeColor
 {
   0%

@@ -2,13 +2,18 @@
 const text = document.querySelector('.decompte')
 const phrase = document.querySelector(".phrase")
 // ----------------------Fin Var compteur ---------------------------------//
-// ----------------------Var text typong ---------------------------------//
+// ----------------------Var text typing ---------------------------------//
 const target = document.getElementById("target");
-console.log(target);
 let array = ['Comment trouver Maxime','How to find max','Cómo encontrar a Maxime','So finden Sie Maxime','كيف تجد مكسيم','如何找到馬克西姆' ];
 let wordIndex = 0; 
 let letterIndex = 0; 
-// ----------------------Fin Var text typong ---------------------------------//
+// ----------------------Fin Var text typing ---------------------------------//
+// ----------------------Var changement de page ---------------------------------//
+const dateBirth = document.getElementById("date")
+const subBirth = document.getElementById("sub")
+const maxBirth = "06/09/1995";
+const vide = "";
+// ---------------------- Fin Var changement de page ---------------------------------//
 
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_  loadeur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -31,7 +36,7 @@ window.addEventListener("load", () => {
             blocks[i].style.animationDelay = `${i * 0.01}s`;
         }
 
-    },1);
+    },5000);
 
 
 
@@ -100,6 +105,32 @@ const loop = () => {
         }
     }, 50)
 };
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_ Changement de page-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+const changepage = () => {
+
+    subBirth.addEventListener("click" , () => {
+        if(dateBirth.value == maxBirth) {
+            alert("Bravo Je suis fière")
+            setTimeout (() => {
+                // mainContent.style.display = "none"
+                // loader.style.display = ""
+                document.location.href = "./m2.html"
+            }, 1)
+        }else if(dateBirth.value == vide) {
+            alert("Le champs est vide entrer une date")
+        }else if (dateBirth.value != maxBirth) {
+            alert("Tu me fait de la peine !")
+        }
+    })    
+}
+
+changepage ();
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_ Changement de page -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
 
 loop();
 

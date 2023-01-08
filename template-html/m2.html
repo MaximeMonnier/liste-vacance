@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeux de piste</title>
+    <link rel="stylesheet" href="../style/m2.css">
+</head>
+<body>
+    <section id="text-scratch">
+        <div class="content">
+            <h2>Scratch-off reveal content effects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid amet nulla velit tenetur ipsum, vitae obcaecati dolorum saepe excepturi repellat laborum nostrum voluptates error. Inventore eius sed, voluptatem totam repellendus itaque aliquam sapiente nihil expedita temporibus cumque perferendis magnam voluptatum dolorum pariatur consequuntur. Eaque, nostrum, quisquam veniam porro maxime eos similique repellendus vel sint soluta eligendi temporibus sed pariatur laborum iste excepturi officia impedit consequuntur natus placeat adipisci praesentium. Minima laudantium tempora odio consequuntur commodi ducimus delectus nemo in recusandae optio? Pariatur distinctio odio dolores ducimus magnam soluta eos, ad sapiente maxime nemo voluptas expedita culpa iste modi assumenda, earum quasi. Quaerat quas ut ratione vitae consequatur iure veritatis eaque, expedita accusantium velit vero sapiente obcaecati eveniet praesentium minima cupiditate similique? Inventore ullam itaque aut nobis quam, maiores cumque quaerat animi quasi sunt iusto, officia similique quae dignissimos molestias a, cupiditate voluptatum temporibus corporis necessitatibus? In labore repellat, reprehenderit consequuntur placeat, ad sed non numquam quo aperiam sequi mollitia incidunt provident explicabo, ex dicta ratione. Debitis sit perspiciatis harum totam voluptates corporis doloribus optio, dolorem culpa beatae vitae nam voluptate neque aliquid ut. Reprehenderit, laboriosam adipisci debitis delectus totam soluta aut voluptatem architecto dolore nam nostrum aliquid fugiat impedit.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script>
+        function setup (){
+            createCanvas(windowWidth, windowHeight);
+        }
+        function draw(){
+            strokeWeight(100);
+            if (mouseIsPressed === true){
+                line(mouseX, mouseY, pmouseX, pmouseY)
+            }
+        }
+    </script>
+</body>
+</html>
