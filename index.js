@@ -116,7 +116,7 @@ const changepage = () => {
             setTimeout (() => {
                 // mainContent.style.display = "none"
                 // loader.style.display = ""
-                document.location.href = "./m2.html"
+                document.location.href = "./m3.html"
             }, 1)
         }else if(dateBirth.value == vide) {
             alert("Le champs est vide entrer une date")

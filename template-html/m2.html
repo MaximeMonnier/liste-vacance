@@ -5,20 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jeux de piste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/m2.css">
 </head>
 <body>
     <section id="text-scratch">
         <div class="content">
-            <h2>Scratch-off reveal content effects</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid amet nulla velit tenetur ipsum, vitae obcaecati dolorum saepe excepturi repellat laborum nostrum voluptates error. Inventore eius sed, voluptatem totam repellendus itaque aliquam sapiente nihil expedita temporibus cumque perferendis magnam voluptatum dolorum pariatur consequuntur. Eaque, nostrum, quisquam veniam porro maxime eos similique repellendus vel sint soluta eligendi temporibus sed pariatur laborum iste excepturi officia impedit consequuntur natus placeat adipisci praesentium. Minima laudantium tempora odio consequuntur commodi ducimus delectus nemo in recusandae optio? Pariatur distinctio odio dolores ducimus magnam soluta eos, ad sapiente maxime nemo voluptas expedita culpa iste modi assumenda, earum quasi. Quaerat quas ut ratione vitae consequatur iure veritatis eaque, expedita accusantium velit vero sapiente obcaecati eveniet praesentium minima cupiditate similique? Inventore ullam itaque aut nobis quam, maiores cumque quaerat animi quasi sunt iusto, officia similique quae dignissimos molestias a, cupiditate voluptatum temporibus corporis necessitatibus? In labore repellat, reprehenderit consequuntur placeat, ad sed non numquam quo aperiam sequi mollitia incidunt provident explicabo, ex dicta ratione. Debitis sit perspiciatis harum totam voluptates corporis doloribus optio, dolorem culpa beatae vitae nam voluptate neque aliquid ut. Reprehenderit, laboriosam adipisci debitis delectus totam soluta aut voluptatem architecto dolore nam nostrum aliquid fugiat impedit.</p>
+            <div class="container">
+                <div class="row">
+                    <h2 class="my-4">Texte écris par Chat GPT </h2>
+                    <h5 class="mb-4">Le demande était : Crée moi un texte de 500 mots en mélangeant philosophie et humour </h5>
+                   <p>"La vie est un mystère, c'est ce qui la rend si intéressante. Mais parfois, elle peut être très frustrante, surtout quand on essaie de comprendre pourquoi les choses arrivent comme elles arrivent. Pourquoi le beurre de cacahuète coûte-t-il plus cher que la cacahuète elle-même? Pourquoi les gens mettent-ils du ketchup sur des frites alors qu'il y a déjà de la sauce tomate sur leur pizza? Et pourquoi faut-il toujours attendre le dernier moment pour acheter des billets de train?
+                    <br>
+                    <br>
+                    La philosophie peut nous aider à trouver des réponses à ces questions existentielles, mais elle peut aussi être très sérieuse et ennuyeuse. C'est pourquoi j'aime mélanger la philosophie avec un peu d'humour. Par exemple, lorsque je réfléchis à la vie et à son sens, je me dis que c'est un peu comme une boîte de chocolats : on ne sait jamais sur quoi on va tomber. Un chocolat au lait sucré et délicieux, ou bien un chocolat noir amer et corsé? C'est la vie, on ne peut jamais être sûr de ce qui nous attend.
+                    <br>
+                    <br>
+                    Mais peu importe ce que la vie nous réserve, il est important de <span id="span"><a href="./m3.html">rester positif et d'essayer de tirer le meilleur parti de chaque situation.</a></span>  C'est là que l'humour entre en jeu. Rire de soi-même et de ses propres erreurs peut être très libérateur et nous aider à relativiser les choses. Et qui sait, peut-être que le prochain chocolat que nous ouvrirons sera celui qui contient la clé du sens de la vie?
+                    <br>
+                    <br>
+                    En résumé, la philosophie et l'humour peuvent sembler être des choses très différentes, mais en réalité, ils sont étroitement liés. La philosophie nous aide à comprendre le monde et à trouver notre place en tant qu'êtres humains, tandis que l'humour nous permet de relativiser et de prendre les choses avec un peu de distance. Alors la prochaine fois que vous réfléchissez à la vie et à son sens, n'oubliez pas de sourire et de prendre les choses du bon côté. Après tout, comme disait le célèbre philosophe Forrest Gump : « La vie, c'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber. »
+                    <br>
+                    <br>
+                    Voici ma signature :
+
+                    Assistant, votre ami virtuel de OpenAI.
+                </p>
+                </div>
+            </div>
         </div>
     </section>
+        <!-- bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     <script>
         function setup (){
             createCanvas(windowWidth, windowHeight);
+         
+            imput = creatInput();
         }
         function draw(){
             strokeWeight(100);
